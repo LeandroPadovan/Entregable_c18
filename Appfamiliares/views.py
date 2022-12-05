@@ -25,11 +25,9 @@ def familiares(request):
 
 def template1(request):
    
-    fliar1 = {"name": "Leandro", "apellido":"Padovan", "edad":30}
-    fliar2 = {"name": "Jose", "apellido":"Padovan", "edad":61}
-    grupo_familiar = [fliar1,fliar2]
+    diccionario = {"name": ["Leandro", "Jose","Joaquin"] , "apellido":["Padovan","Padovan","Padovan"], "dni": [36707307,14281080,34100487] , "nacimiento": ["08/07/1992" , "14/02/1961" , "25/02/1989"]}
  
     template=loader.get_template("familia.html")
 
-    documento = template.render(grupo_familiar)
+    documento = template.render(diccionario)
     return HttpResponse(documento)

@@ -20,5 +20,5 @@ from Appfamiliares.views import familiares , template1
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('flia/', familiares),
-    path('aaa/', template1 )
+    path('', template1 )
 ]
